@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -24,3 +25,6 @@ New and improved version of digital letters!
 # Digital-Letters
 Better and Improved version of digital letters
 >>>>>>> 939bc5c7fd15f4630c71988528fafb0365c79ef9
+=======
+# Digital-Letters
+>>>>>>> 740bbe10a55bf27ee6f462f4d45840e7bbdebdcb
