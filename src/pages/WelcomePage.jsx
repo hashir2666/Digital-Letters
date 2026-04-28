@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import ShinyText from '../components/ShinyText.jsx'
-import bgUrl from '../../welcome_wallpaper_bg.html?url'
 
 function WelcomePage() {
   const navigate = useNavigate()
@@ -13,7 +12,7 @@ function WelcomePage() {
       {/* Background iframe */}
       <iframe
         className="absolute inset-0 h-full w-full object-cover border-none pointer-events-none"
-        src={bgUrl}
+        src="/welcome_wallpaper_bg.html"
         title="Background Animation"
       />
 
