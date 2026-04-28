@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import ShinyText from '../components/ShinyText.jsx'
+import bgUrl from '../../welcome_wallpaper_bg.html?url'
 
 function WelcomePage() {
   const navigate = useNavigate()
@@ -9,14 +10,11 @@ function WelcomePage() {
     <div
       className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black"
     >
-      {/* Background video (put your file as /home-hero.mp4 in public/) */}
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        src="/home-hero.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
+      {/* Background iframe */}
+      <iframe
+        className="absolute inset-0 h-full w-full object-cover border-none pointer-events-none"
+        src={bgUrl}
+        title="Background Animation"
       />
 
       {/* Soft overlay to keep text readable on any photo */}
