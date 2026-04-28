@@ -1,0 +1,122 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Glass Reflection Shimmer Effect */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.shimmer-element {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+  pointer-events: none;
+  animation: shimmer 8s ease-in-out infinite;
+}
+
+.shimmer-element.active {
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
+}
+
+/* Custom Hand-Drawn Cursor */
+body {
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, rgba(255, 105, 180, 0.9), rgba(219, 39, 119, 0.6));
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.6), 0 0 16px rgba(219, 39, 119, 0.3), inset 0 0 4px rgba(255, 255, 255, 0.3);
+  z-index: 9999;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+}
+
+.custom-cursor.hovering {
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, rgba(255, 182, 193, 1), rgba(219, 39, 119, 0.8));
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.9), 0 0 24px rgba(219, 39, 119, 0.5), inset 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+/* Hide default cursor on interactive elements */
+button,
+a,
+[role="button"],
+.mood-card,
+.flower-button {
+  cursor: none;
+}
