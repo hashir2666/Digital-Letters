@@ -1,23 +1,14 @@
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import ShinyText from '../components/ShinyText.jsx'
+import AnimatedBackground from '../components/AnimatedBackground.jsx'
 
 function WelcomePage() {
   const navigate = useNavigate()
 
   return (
-    <div
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black"
-    >
-      {/* Background iframe */}
-      <iframe
-        className="absolute inset-0 h-full w-full object-cover border-none pointer-events-none"
-        src="/welcome_wallpaper_bg.html"
-        title="Background Animation"
-      />
-
-      {/* Soft overlay to keep text readable on any photo */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/35 to-black/55 sm:from-black/40 sm:via-black/30 sm:to-black/55" />
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden">
+      <AnimatedBackground />
 
       {/* Centered heading + button */}
       <div
